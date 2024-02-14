@@ -1,0 +1,10 @@
+@import "node_modules/bulma/bulma.sass";
+
+body {
+  margin: 0px;
+}
+
+div {
+  animation-name: fadein;
+  animation-duration: 250ms;
+}
