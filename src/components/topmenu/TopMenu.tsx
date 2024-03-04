@@ -1,3 +1,20 @@
 export const TopMenu = () => {
-  return <div>Top menu</div>
+  const items = [{ name: "Item1" }, { name: "Item2" }]
+
+  return (
+    <div>
+      <div className="navbar">
+        <div className="navbar-brand">Logo</div>
+        <div className="navbar-start">
+          {items.map(item => {
+            return (
+              <>
+                <a className="navbar-item">{item.name}</a>
+              </>
+            )
+          })}
+        </div>
+      </div>
+    </div>
+  )
 }

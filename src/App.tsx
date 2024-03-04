@@ -6,6 +6,7 @@ import { initializeApp } from "firebase/app"
 import { firebaseConfig } from "./config/config"
 import { getDatabase, ref, onValue } from "firebase/database"
 import { MainView } from "./components/mainview/MainView"
+import { store } from "./app/curcuma-store"
 
 const App = () => {
   const firebaseApp = initializeApp(firebaseConfig)

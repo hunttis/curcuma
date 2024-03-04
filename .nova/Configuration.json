@@ -3,5 +3,6 @@
   "index.ignored_file_patterns" : [
     "node_modules\/*"
   ],
+  "workspace.color" : 2,
   "workspace.name" : "curcuma"
 }

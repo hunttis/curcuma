@@ -1,20 +1,24 @@
 import { TopMenu } from "../topmenu/TopMenu"
-import { Columns, Notification } from "react-bulma-components"
+import { ContentView } from "../content/ContentView"
+import { Footer } from "../footer/Footer"
 
 export const MainView = () => {
   return (
-    <div>
-      <Columns>
-        <div>
-          <Notification color="warning">MainView</Notification>
+    <div className="container">
+      <section className="hero is-info">
+        <div className="hero-body">
+          <p className="title">Curcuma</p>
+          <p className="subtitle">Curcuma is a new version of Tourmeric.</p>
         </div>
-        <div>
-          <Notification color="success">MainView</Notification>
-        </div>
-      </Columns>
-      <div className="block">
+      </section>
+
+      <div className="container">
         <TopMenu />
       </div>
+      <section className="section">
+        <ContentView />
+      </section>
+      <Footer />
     </div>
   )
 }
