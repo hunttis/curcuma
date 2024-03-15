@@ -1,9 +1,10 @@
-import { Events } from "../events/Events"
+import EventCalendar from "~/components/events/EventCalendar"
 
 export const ContentView = () => {
   return (
     <section className="section">
-      <Events />
+      {/* <Events /> */}
+      <EventCalendar />
     </section>
   )
 }

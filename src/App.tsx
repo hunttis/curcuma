@@ -1,16 +1,21 @@
 import "./App.scss"
 import { Router } from "react-router"
 import React, { useState } from "react"
+import { firebaseConfig } from "./config/config"
 
 import { initializeApp } from "firebase/app"
-import { firebaseConfig } from "./config/config"
+
 import { getDatabase, ref, onValue } from "firebase/database"
 import { MainView } from "./components/mainview/MainView"
-import { store } from "./app/curcuma-store"
+import "~/style.css"
+import { CurcumaProvider } from "./app/curcuma-context"
 
 const App = () => {
   const firebaseApp = initializeApp(firebaseConfig)
   const db = getDatabase(firebaseApp)
+
+  //# I want to get the events data from the firebase db and store it in the redux store
+
   //   const eventsRef = ref(db, "events")
   //
   //   const [eventList, setEventList] = useState()
@@ -24,7 +29,9 @@ const App = () => {
   //   })
   return (
     <div className="App">
-      <MainView />
+      <CurcumaProvider>
+        <MainView />
+      </CurcumaProvider>
     </div>
   )
 }

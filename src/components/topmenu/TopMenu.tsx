@@ -8,9 +8,9 @@ export const TopMenu = () => {
         <div className="navbar-start">
           {items.map(item => {
             return (
-              <>
+              <div key={item.name}>
                 <a className="navbar-item">{item.name}</a>
-              </>
+              </div>
             )
           })}
         </div>
