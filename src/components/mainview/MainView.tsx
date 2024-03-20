@@ -1,11 +1,16 @@
-import { TopMenu } from "../topmenu/TopMenu"
-import { ContentView } from "../content/ContentView"
-import { Footer } from "../footer/Footer"
+import ContactInfo from "~/components/contactinfo/ContactInfo"
+import EventCalendar from "~/components/events/EventCalendar"
+import { Footer } from "~/components/footer/Footer"
+import Today from "~/components/today/Today"
+import { TopMenu } from "~/components/topmenu/TopMenu"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+
+import React, { useState } from "react"
 
 export const MainView = () => {
   return (
-    <div className="container">
-      <section className="hero is-info">
+    <Router>
+      <section className="hero is-info is-fullwidth is-marginless is-paddingless">
         <div className="hero-body">
           <p className="title">Curcuma</p>
           <p className="subtitle">Curcuma is a new version of Tourmeric.</p>
@@ -16,9 +21,13 @@ export const MainView = () => {
         <TopMenu />
       </div>
       <section className="section">
-        <ContentView />
+        <Routes>
+          <Route path="/contactinfo" element={<ContactInfo />} />
+          <Route path="/today" element={<Today />} />
+          <Route path="/events" element={<EventCalendar />} />
+        </Routes>
       </section>
       <Footer />
-    </div>
+    </Router>
   )
 }

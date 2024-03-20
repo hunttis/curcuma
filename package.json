@@ -15,12 +15,20 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "bulma": "^0.9.4",
-    "date-fns": "^3.5.0",
+    "bulmaswatch": "^0.8.1",
+    "date-fns": "^3.6.0",
     "firebase": "^10.9.0",
+    "i": "^0.3.7",
+    "npm": "^10.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router": "^6.22.3"
+    "react-router": "^6.22.3",
+    "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
     "@testing-library/dom": "^9.3.4",

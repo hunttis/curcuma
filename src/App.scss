@@ -1,4 +1,8 @@
-@import "node_modules/bulma/bulma.sass";
+@import "bulma/bulma.sass";
+
+// @import "bulmaswatch/cyborg/bulmaswatch.scss";
+// @import "bulmaswatch/cyborg/_variables.scss";
+// @import "bulmaswatch/cyborg/_overrides.scss";
 
 body {
   margin: 0px;
@@ -7,4 +11,8 @@ body {
 div {
   animation-name: fadein;
   animation-duration: 250ms;
+}
+
+.modal-background {
+  background-color: rgba(10, 10, 10, 0.3);
 }

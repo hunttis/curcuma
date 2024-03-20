@@ -17,4 +17,11 @@ export default defineConfig({
       "~": "/src",
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "bulma/bulma.sass";`,
+      },
+    },
+  },
 })
